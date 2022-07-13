@@ -5,8 +5,8 @@ const verifyToken = require('../middleware/verifyJWT');
 
 router.get('/view',crud.show);
 router.get('/view/single/:id',crud.showsingle);
-router.post('/add',verifyToken,crud.create);
-router.put('/update/:id',verifyToken,crud.update);
-router.delete('/delete/:id',verifyToken,crud.delete);
+router.post('/add',crud.create);
+router.put('/update/:id',crud.update);
+router.delete('/delete/:id',crud.delete);
 
 module.exports = router;

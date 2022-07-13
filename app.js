@@ -22,7 +22,7 @@ app.use('/api-auth',authOp);
 
 // Connection for the database
 mongoose.Promise = global.Promise; 
-mongoose.connect(dbConfig.url,{
+mongoose.connect(dbConfig.mongoURI,{
    useNewUrlParser:true 
 }).then(()=>{
     console.log("Successfully Connected To The Database")
